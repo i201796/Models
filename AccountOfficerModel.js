@@ -12,7 +12,7 @@ const AccountOfficerSchema = new mongoose.Schema({
     unique: true
   },
   employeeId: {
-    type: Number,
+    type: String,
     required: true,
     unique: true
     },

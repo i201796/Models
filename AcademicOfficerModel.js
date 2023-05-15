@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const AcademicOfficerSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -24,8 +23,12 @@ const AcademicOfficerSchema = new mongoose.Schema({
   joiningDate: {
     type: Date,
     default: Date.now
+  },
+  password: {
+    type: String,
+    required: true
   }
 });
 
 const AcademicOfficer = mongoose.model('AcademicOfficer', AcademicOfficerSchema);
-module.exports = AcademicOfficer;
+module.exports = {AcademicOfficer};
