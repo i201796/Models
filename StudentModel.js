@@ -72,7 +72,8 @@ const StudentSchema = new mongoose.Schema({
   },
   isFeePaid:{
     type: Boolean,
-    required: true
+    required: true,
+    default: false
   },
   role: {
     type: String,
@@ -81,7 +82,7 @@ const StudentSchema = new mongoose.Schema({
   },
   feeChalan:{
     type: [FeeChalanSchema],
-    required: true
+    required: false
   }
 });
 
